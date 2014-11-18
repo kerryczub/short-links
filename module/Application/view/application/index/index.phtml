@@ -1,0 +1,28 @@
+<?php
+$form->prepare();
+?>
+
+<?= $this->form()->openTag($form) ?>
+
+<?php if (count($form->getMessages())): ?>
+    <div class="alert alert-danger spacer">
+        <h4>Warning!</h4>
+        There were one or more errors while attempting to create your short link.  Please review
+        and address the items noted below.
+    </div>
+<?php endif; ?>
+
+    <div class="panel panel-default spacer">
+        <div class="panel-heading"><h4>Create Short Link</h4></div>
+        <div class="panel-body">
+
+            <div class="input-group">
+                <?= $this->formCollection( $form ); ?>
+            </div>
+
+            <button class="btn btn-success spacer" type="submit">Create</button>
+
+        </div>
+    </div>
+
+<?= $this->form()->closeTag(); ?>

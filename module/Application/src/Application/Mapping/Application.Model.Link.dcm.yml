@@ -1,0 +1,13 @@
+Application\Model\Link:
+  type: entity
+  table: link
+  id:
+    id:
+      column: link_id
+      type: bigint
+      generator:
+        strategy: IDENTITY
+  fields:
+    name:
+    longUrl:
+    shortUrl:
