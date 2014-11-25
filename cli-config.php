@@ -17,14 +17,6 @@ $dbParams = array(
     'path' => 'data/sample.db'
 );
 
-//$dbParams = array(
-//    'driver'   => 'pdo_pgsql',
-//    'host'     => 'pg-grr-99.ussig.net',
-//    'dbname'     => 'USS',
-//    'user' => '',
-//    'password' => ''
-//);
-
 $config = Setup::createYAMLMetadataConfiguration($paths, $isDevMode);
 $em = EntityManager::create($dbParams, $config);
 
